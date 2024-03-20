@@ -3,7 +3,7 @@
 https://www.hackingwithswift.com/read/31/overview
 
 ## Topics
-UIStackView, iPad Multitasking, UIGestureRecognizerDelegate
+UIStackView, iPad Multitasking, UIGestureRecognizerDelegate, Size Classes
 
 ## [Challenges](https://www.hackingwithswift.com/read/31/6/wrap-up):
 1. If you want to try extending this project, the sensible place to start is in the URL entry: if users don't type "http://" before their web site addresses the app fails, which isn't very helpful.
