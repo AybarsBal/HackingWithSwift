@@ -1,7 +1,8 @@
 # 100DaysOfSwift
 HackingWithSwift Projects & Challenges by Paul Hudson
-
 https://www.hackingwithswift.com/read
+
+[Projects1-30, Challenges and Milestone Projects](https://github.com/AybarsBal/100DaysOfSwift)
 
 # Preview
 | Project/Topic | Screenshots |
