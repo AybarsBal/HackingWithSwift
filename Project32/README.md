@@ -3,7 +3,7 @@
 https://www.hackingwithswift.com/read/32/overview
 
 ## Topics
-Core Spotlight, SFSafariViewController, NSAttributedString, Dynamic Type, automatic UITableViewCell sizing
+Core Spotlight, SFSafariViewController, NSAttributedString, Dynamic Type, Automatic UITableViewCell Sizing
 
 ## [Challenges](https://www.hackingwithswift.com/read/32/5/wrap-up):
 1. If you want to work on this project some more, a great place to start is to convert the projects array to contain objects of a custom subclass rather than just an array. Not only is it safer coding, but it's also more extensible – you might want to add images or other data, and our array stops being so simple when you add more to it! You should follow much the same technique as taught in project 12 to handle loading and saving.
