@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import UIKit
+import GameplayKit
+
+print(arc4random())
+print(arc4random())
+
+print(arc4random() % 6) // causes modulo bias
+print(arc4random_uniform(6)) // decent way 
+
+
+func RandomInt(min: Int, max: Int) -&gt; Int {
+    if max &lt; min { return min }
+    return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
+}
+print(RandomInt(min: 10, max: 50))
+print(Int.random(in: 10...50)) // newer method
+
+//---
+
+print(GKRandomSource.sharedRandom().nextInt())
+print(GKRandomSource.sharedRandom().nextInt(upperBound: 6)) // 0 to 5
+print(GKRandomSource.sharedRandom().nextUniform())
+
+let arc4 = GKARC4RandomSource()
+arc4.dropValues(1024)
+print(arc4.nextInt(upperBound: 20))
+
+let mersenne = GKMersenneTwisterRandomSource()
+print(mersenne.nextInt(upperBound: 20)) // max randomness
+
+
+let d6 = GKRandomDistribution.d6()
+print(d6.nextInt())
+
+let d20 = GKRandomDistribution.d20()
+print(d20.nextInt())
+
+let crazy = GKRandomDistribution(lowestValue: 1, highestValue: 11539)
+print(crazy.nextInt())
+
+let rand = GKMersenneTwisterRandomSource()
+let distribution = GKRandomDistribution(randomSource: rand, lowestValue: 10, highestValue: 20)
+print(distribution.nextInt())
+
+
+let shuffled = GKShuffledDistribution.d6()
+ // it will go through every possible number before you see a repeat
+print(shuffled.nextInt())
+print(shuffled.nextInt())
+print(shuffled.nextInt())
+print(shuffled.nextInt())
+print(shuffled.nextInt())
+print(shuffled.nextInt())
+
+
+let lotteryBalls = [Int](1...49)
+let shuffledBalls = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: lotteryBalls) // returns new array rather than modify the original
+print(shuffledBalls[0])
+print(shuffledBalls[1])
+print(shuffledBalls[2])
+print(shuffledBalls[3])
+print(shuffledBalls[4])
+print(shuffledBalls[5])
+
+
+let fixedLotteryBalls = [Int](1...49)
+let fixedShuffledBalls = GKMersenneTwisterRandomSource(seed: 1001).arrayByShufflingObjects(in: fixedLotteryBalls)
+// with random source with a specific seed, always return same "random" array
+print(fixedShuffledBalls[0])
+print(fixedShuffledBalls[1])
+print(fixedShuffledBalls[2])
+print(fixedShuffledBalls[3])
+print(fixedShuffledBalls[4])
+print(fixedShuffledBalls[5])
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 2144}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
